@@ -1,2 +1,2 @@
-# Recipe-Page
+# Small-Projects
 Quick upload to show experience

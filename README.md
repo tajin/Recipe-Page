@@ -1,2 +1,2 @@
 # Small-Projects
-Quick upload to show experience
+This is where I will save any experiences I have in programming. I will use this to display my small projects and basic understanding of computer languages. I will constantly update this repository with new programs and update old ones that are unfinished. This will help lead to bigger projects where I will create a seperate repository for them. For now this is what I have, I can't wait to have so many more programs under my belt.

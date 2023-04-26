@@ -1,0 +1,20 @@
+1111
+Homer Simpson
+XYZ123 2 5.0
+ABC456 1 22.50
+#
+3333
+Lisa Simpson
+XYZ888 10 1.5
+#
+4444
+Bart Simpson
+PQM777 2 5.0
+ABC888 1 10.50
+HIJ222 1 2.25
+#
+2222
+Marge Simpson
+DEF999 1 75.00
+XYZ777 1 25.00
+#

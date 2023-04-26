@@ -1,4 +1,7 @@
-'''payrate = 20
+'''
+//First attempt
+
+payrate = 20
 employees = []
 employee_hours = [0]*10
 
@@ -17,6 +20,8 @@ for i in range(len(final_pay)):
     print(key[i] + value[i])
 print(final_pay)'''
 
+
+#Refined attempt
 
 payrate = 20
 employees = []

@@ -1,13 +1,15 @@
+#First python project practicing if/else statements
 print("Welcome to my first project!")
 name = input("what is your name? ")
 print("Hello", name + ", I am glad you are here")
 print(name, "I would like to get to know you a little better")
 age = int(input("What is your age? "))
-
+print("Say you are going to fight a zombie, which would you choose...")
+weapon = input("A katana or a spear ").lower()
 health = 10
 
-if age <= 25:
-    print("ok grandpa I guess you can play")
+if age >= 16:
+    print("Great, You are old enough to play")
 
     wants_to_play = input("Do you want to play? ").lower()
     if wants_to_play == "yes":
@@ -18,37 +20,36 @@ if age <= 25:
         direction = input("First choice... Left or Right? ").lower()
         if direction == "left":
             ans = input(
-                "Nice, you chose wisely and lived... You then stumble across a ravine... Do your Jump or do you Turn back(Jump/Turn?)")
-
-            if ans == "Jump":
-                print("Good shit bro you made it")
-
-            elif ans == "Turn":
+                "Nice, you chose wisely and lived... You then stumble across a ravine... Do your Jump or do you turn back (Jump/Turn?) ").lower()
+            if ans == "jump":
+                print("Nice! You made it")
+            elif ans == "turn":
                 print("Lol you turn back but encounter someone...")
-
             else:
-                print("wow, you are now stuck in place dumbass")
+                print("Oh no! You are now stuck in place")
 
-            ans = input("You notice a house and a river, which do you go to (river/house?) ")
+            ans = input("You notice a house and a river, which do you go to (river/house?) ").lower()
             if ans == "house":
-                print("You go to the house and are greeted by the owner, he merks your bitch ass")
+                print("You go to the house and are greeted by the owner, he kills you")
                 health -= 1
 
                 if health <= 0:
                     print("your health has fallen below 0, its Game Over")
                 else:
-                    print("Congradulations, You have made it this far")
+                    print("Congratulations, You have made it this far")
 
             else:
                 print("You go to a room and find a key")
 
-        else:
+        if direction == "right":
             print("You walk into a puddle of mud, oh no its quick sand now you are drowning...")
             health -= 1
-            print("Lol you died")
-            health -= 1
+            print("You took lung damage from all of the dirt in your system")
             print(health, "health remaining...")
 
+            ans = int(input("You find yourself in a room with keypad on it, you must enter a number 1-10 "))
+            if ans == 7:
+                print("")
     else:
         print("Ok, have a good day...")
 

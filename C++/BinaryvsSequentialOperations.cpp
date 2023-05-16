@@ -73,7 +73,7 @@ int populateStockMarkeyDatabase(vector<string>& vSymbol, vector<string>& vCompan
     int index, counter = 0;
     string stock, data;
     ifstream myinfile;
-    myinfile.open("c:/users/angel/temp/stockTickerSymbol-Windows.csv");
+    myinfile.open("C++/Note Files/stockTickerSymbol-Windows.csv");
 
     if (!myinfile)
     {

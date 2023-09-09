@@ -73,9 +73,9 @@ int main()
          << "49443" << endl
          << endl;
 
-    cout << "The 8-bit Binary of -72 is" << InttoBinary(-72) << endl;
-    cout << "The 8-bit Binary of -98 is" << InttoBinary(-98) << endl;
-    cout << "The 8-bit Binary of -26 is" << InttoBinary(-26) << endl
+    cout << "The 8-bit Binary of -72 is " << InttoBinary(-72) << endl;
+    cout << "The 8-bit Binary of -98 is " << InttoBinary(-98) << endl;
+    cout << "The 8-bit Binary of -26 is " << InttoBinary(-26) << endl
          << endl;
 
     cout << "The sum of 6B4 + 3FE is " << HexplusHex("6B4", "3FE") << endl;
@@ -100,7 +100,7 @@ string InttoBinary(int num)
 {
     int quotient = abs(num), remainder, b;
     bool isNegative = false, toggle = true;
-    string Binary;
+    string Binary, filler;
     char c = '0';
 
     while (quotient > 0)
@@ -154,7 +154,15 @@ string InttoBinary(int num)
                 toggle = false;
             }
         }
+
+        for (int j = 0; j < (16-Binary.length()); j ++)
+        {
+            filler += '1';
+        }
+
+        Binary = filler + Binary;
     }
+
 
     return Binary;
 }

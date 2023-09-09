@@ -116,12 +116,12 @@ string InttoBinary(int num)
         isNegative = true;
         Binary += '0';
     }
-    /*
+    
     while(Binary.length() <4)
     {
         Binary += '0';
     }
-    */
+    
 
     reverse(Binary.begin(), Binary.end());
 
@@ -284,7 +284,7 @@ string HextoBinary(string Hex)
     string Bin, result;
     int current;
 
-    for (int i = 0; i < Hex.length() - 1; i++)
+    for (int i = 0; i <= Hex.length() - 1; i++)
     {
         if (isdigit(Hex[i]) == false)
         {

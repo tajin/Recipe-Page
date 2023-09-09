@@ -17,7 +17,6 @@
 #include <iostream>
 #include <string>
 #include <math.h>
-#include <stdlib.h>
 #include <algorithm>
 using namespace std;
 
@@ -35,8 +34,10 @@ int main()
 
     cout << "Int to Binary: " << InttoBinary(-72) << endl;
     cout << "Result: " << BinarytoInt("0000000000001010") << endl;
-    cout << "Int to Hex: " << InttoHex(21);
-    cout << "Hex1 plus Hex2: " << HexplusHex("6A", "4B");
+    cout << "Int to Hex: " << InttoHex(21) << endl;
+    cout << "Hex1 plus Hex2: " << HexplusHex("6A", "4B") << endl;
+    cout << "Hex1 plus Hex2: " << HexplusHex("36", "42") << endl;
+    cout << "Binary Minus Binary: " << BinaryMinusBinary("000000101", "10001000") << endl;
 }
 
 string InttoBinary(int num)
@@ -134,5 +135,43 @@ string InttoHex(int num)
 
 string HexplusHex(string hex1, string hex2)
 {
-    return "YEs";
+    string sum, alphabet = "0123456789ABCDEFG";
+    int a, b, quotient = 0, remainder = 1, i = hex1.length()-1;
+    char c;
+
+    while ((remainder >= 1) or (quotient > 0))
+    {
+        if (isdigit(hex1[i])){a  = hex1[i] - '0';}
+        else {a = (int(hex1[i])-64) +9;}
+
+        if (isdigit(hex2[i])){b  = hex2[i] - '0';}
+        else {b = (int(hex2[i])-64)+9;}
+
+        if (i < 0)
+        {
+            a = 0;
+            b = 0;
+        }
+
+        remainder = ((a+b) + quotient) %16;
+        quotient = ((a+b) + quotient)/ 16;
+
+        if (remainder > 9)
+        {
+            sum += alphabet[remainder];
+        }
+        else{sum += '0' + remainder;}
+
+        i--;
+    }
+
+    sum.pop_back();
+    reverse(sum.begin(), sum.end());
+
+   return sum;
+}
+
+string BinaryMinusBinary(string Bin1, string Bin2)
+{
+    
 }
